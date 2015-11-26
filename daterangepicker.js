@@ -859,7 +859,7 @@
                 startDate = this.startDate;
                 endDate = this.rightCalendar.calendar[row][col];
                 if (typeof this.dateLimit === 'object') {
-                    var minDate = moment(endDate).subtract(this.dateLimit).startOf('day');
+                    var minDate = moment(endDate).subtract(this.dateLimit).endOf('day');
                     if (startDate.isBefore(minDate)) {
                         startDate = minDate;
                     }
